@@ -55,27 +55,12 @@ export default function Hero() {
                     transition={{ delay: 0.4, duration: 0.8 }}
                     className="relative hidden md:block"
                 >
-                    <div className="relative z-10 relative w-full h-[600px] rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-100 p-2">
-                        <div className="absolute inset-0 bg-gradient-to-tr from-blue-50 to-white opacity-50 z-0"></div>
-                        {/* Abstract simplified UI representation */}
-                        <div className="relative z-10 h-full w-full bg-white rounded-xl overflow-hidden flex flex-col">
-                            <div className="h-16 border-b border-gray-100 flex items-center px-6 gap-2">
-                                <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                                <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                            </div>
-                            <div className="p-8 grid grid-cols-2 gap-4">
-                                <div className="col-span-2 h-32 bg-blue-500/5 rounded-xl flex items-center justify-center border border-blue-100 mb-4">
-                                    <div className="text-center">
-                                        <div className="text-3xl font-bold text-primary mb-1">₹ 2,45,000</div>
-                                        <div className="text-sm text-gray-500">Total Transaction Volume</div>
-                                    </div>
-                                </div>
-                                {[1, 2, 3, 4].map(i => (
-                                    <div key={i} className="h-24 bg-gray-50 rounded-xl animate-pulse"></div>
-                                ))}
-                            </div>
-                        </div>
+                    <div className="relative z-10 w-full flex justify-center items-center">
+                        <img
+                            src="/hero-illustration.png"
+                            alt="Zapurse Mobile Recharge and AEPS Fintech App"
+                            className="w-full max-w-lg object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                        />
                     </div>
 
                     {/* Decorative blobs */}
