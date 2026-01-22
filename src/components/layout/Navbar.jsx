@@ -3,6 +3,7 @@ import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../../lib/utils';
 import { Link } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -24,10 +25,8 @@ export default function Navbar() {
             path: '/services',
             isDropdown: true,
             items: [
-                { name: 'AEPS', path: '/services#aeps' },
-                { name: 'Zapurse Recharge', path: '/services#recharge' },
-                { name: 'Micro ATM', path: '/services#microatm' },
-                { name: 'Money Transfer', path: '/services#dmt' },
+                { name: 'Mobile Recharge', path: '/services#recharge' },
+                { name: 'DTH Recharge', path: '/services#dth' },
             ]
         },
         { name: 'About Us', path: '/about' },
@@ -43,7 +42,7 @@ export default function Navbar() {
         >
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
                 {/* Logo */}
-                <Link to="/" className="text-2xl font-bold tracking-tighter text-black flex items-center gap-2">
+                <Link to="/" className="text-2xl font-bold tracking-tighter text-black dark:text-white flex items-center gap-2">
                     <span className="text-primary text-3xl">Z</span>apurse
                 </Link>
 
@@ -80,7 +79,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className="md:hidden p-2 text-black"
+                    className="md:hidden p-2 text-black dark:text-white"
                     onClick={() => setMobileMenuOpen(true)}
                 >
                     <Menu size={24} />
@@ -126,7 +125,7 @@ export default function Navbar() {
                                                             key={item.name}
                                                             to={item.path}
                                                             onClick={() => setMobileMenuOpen(false)}
-                                                            className="text-lg text-gray-600"
+                                                            className="text-lg text-gray-600 dark:text-gray-300"
                                                         >
                                                             {item.name}
                                                         </Link>
