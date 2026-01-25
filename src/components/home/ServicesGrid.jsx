@@ -23,7 +23,7 @@ const services = [
 
 export default function ServicesGrid() {
     return (
-        <section className="py-24 bg-white dark:bg-gray-900 transition-colors" id="services">
+        <section className="py-24 bg-transparent transition-colors" id="services">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                     <div className="max-w-2xl">

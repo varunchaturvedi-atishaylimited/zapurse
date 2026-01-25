@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Hero() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-blue-50/30 to-white dark:from-black dark:via-gray-900 dark:to-black pt-20 transition-colors">
+        <section className="relative min-h-screen flex items-center justify-center pt-20 transition-colors">
             <div className="container mx-auto px-4 md:px-6 z-10 grid md:grid-cols-2 gap-12 items-center">
 
                 {/* Text Content */}
@@ -32,19 +32,36 @@ export default function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-                        <Link
-                            to="/contact"
-                            className="group relative px-8 py-4 bg-primary text-white rounded-full font-semibold text-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2 overflow-hidden"
-                        >
-                            <span className="relative z-10">Become a Partner</span>
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
-                        </Link>
-                        <Link
-                            to="/services"
-                            className="px-8 py-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-full font-semibold text-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all flex items-center justify-center"
-                        >
-                            Explore Services
-                        </Link>
+                        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+    {/* Play Store Button */}
+    <a
+        href="https://play.google.com/store/apps/details?id=com.zapurse.zapurse&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="transition-transform hover:scale-105"
+    >
+        <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+            alt="Get it on Google Play"
+            className="h-14"
+        />
+    </a>
+
+    {/* App Store Button */}
+    <a
+        href="https://apps.apple.com/in/app/zapurse-recharge/id6751755861"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="transition-transform hover:scale-105"
+    >
+        <img
+            src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+            alt="Download on the App Store"
+            className="h-14"
+        />
+    </a>
+</div>
+
                     </div>
                 </motion.div>
 
@@ -55,17 +72,24 @@ export default function Hero() {
                     transition={{ delay: 0.4, duration: 0.8 }}
                     className="relative hidden md:block"
                 >
-                    <div className="relative z-10 w-full flex justify-center items-center">
+
+                    <div className="relative z-10 w-full 
+                max-w-[160px] 
+                sm:max-w-[220px] 
+                md:max-w-[260px] 
+                lg:max-w-[220px] 
+                xl:max-w-[550px]
+                mx-auto flex justify-center items-center">
+
                         <img
                             src="/hero-illustration.png"
                             alt="Zapurse Mobile Recharge and Fintech App"
-                            className="w-full max-w-lg object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                            className="w-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500 rounded-2xl"
                         />
                     </div>
 
-                    {/* Decorative blobs */}
-                    <div className="absolute -top-20 -right-20 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl -z-10 dark:opacity-40"></div>
-                    <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-purple-400/20 rounded-full blur-3xl -z-10 dark:opacity-40"></div>
+
+
                 </motion.div>
             </div>
 
@@ -77,7 +101,7 @@ export default function Hero() {
                 className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
                 onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
             >
-                <span className="text-xs font-medium text-gray-400 uppercase tracking-widest">Scroll</span>
+                {/* <span className="text-xs font-medium text-gray-400 uppercase tracking-widest">.</span> */}
                 <div className="w-[1px] h-12 bg-gradient-to-b from-gray-300 to-transparent dark:from-gray-600"></div>
             </motion.div>
         </section>

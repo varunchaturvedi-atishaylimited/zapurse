@@ -23,8 +23,8 @@ const services = [
 
 export default function Services() {
     return (
-        <div className="pt-24 min-h-screen bg-gray-50 dark:bg-black pb-20 transition-colors">
-            <div className="container mx-auto px-4 md:px-6">
+        <div className="pt-24 min-h-screen bg-transparent pb-20 transition-colors">
+            <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <motion.h1
                         initial={{ opacity: 0, y: -20 }}
@@ -37,7 +37,7 @@ export default function Services() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="text-xl text-gray-600 dark:text-gray-300"
+                        className="text-xl text-gray-600 dark:text-gray-400"
                     >
                         Specialized recharge solutions tailored for retail businesses. Grow your revenue with our robust recharge platform.
                     </motion.p>

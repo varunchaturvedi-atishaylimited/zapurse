@@ -23,29 +23,48 @@ const testimonials = [
 ];
 
 const partners = [
-    { name: "Jio", color: "text-blue-600" },
-    { name: "Airtel", color: "text-red-600" },
-    { name: "Axis Bank", color: "text-rose-700" },
-    { name: "Yes Bank", color: "text-blue-500" },
-    { name: "ICICI Bank", color: "text-orange-600" },
-    { name: "DishTV", color: "text-pink-600" }
+    { name: "air_digitv.png", color: "text-blue-600" },
+    { name: "airtel.png", color: "text-red-600" },
+    { name: "dish-tv.png", color: "text-rose-700" },
+    { name: "jio.png", color: "text-blue-500" },
+    { name: "reliance_bigtv.jpg", color: "text-orange-600" },
+    { name: "sun_direct.png", color: "text-pink-600" },
+    { name: "tata_sky.jpg", color: "text-pink-600" },
+    { name: "videocon.png", color: "text-pink-600" },
+    { name: "vil.png", color: "text-pink-600" },
+    { name: "bsnl.jpg", color: "text-pink-600" }
 ];
+
 
 export default function PartnersAndTestimonials() {
     return (
-        <section className="py-24 bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-900 transition-colors">
+        <section className="py-24 bg-transparent transition-colors relative">
             <div className="container mx-auto px-4 md:px-6">
-                {/* Partners */}
-                <div className="mb-24 text-center">
-                    <h3 className="text-xl font-semibold text-gray-400 mb-12 uppercase tracking-widest">Our Banking & Telco Partners</h3>
-                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-                        {partners.map((partner, i) => (
-                            <div key={i} className={`text-2xl md:text-3xl font-bold font-sans opacity-70 hover:opacity-100 transition-opacity ${partner.color} bg-white dark:bg-gray-800 px-6 py-3 rounded-lg shadow-sm`}>
-                                {partner.name}
+
+                {/* Partners Auto-scroll */}
+                <div className="mb-24 text-center overflow-hidden">
+                    <h3 className="text-xl font-semibold mb-12 uppercase tracking-widest">
+                        Our Telco Partners
+                    </h3>
+                    <div className="flex w-max animate-scroll gap-8">
+                        {[...partners, ...partners].map((partner, i) => (
+                            <div
+                                key={i}
+                                className="flex items-center justify-center p-4 flex-shrink-0"
+                            >
+                                <img
+                                    src={`/brand-logo/${partner.name}`}
+                                    alt={partner.name.split('.')[0]}
+                                    className="h-10 md:h-14 object-contain transition-all hover:scale-110"
+                                />
                             </div>
                         ))}
                     </div>
                 </div>
+
+
+
+
 
                 {/* Testimonials */}
                 <div className="max-w-6xl mx-auto">

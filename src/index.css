@@ -9,17 +9,81 @@
   }
 
   body {
-    @apply bg-white text-black font-serif antialiased;
+    @apply bg-white dark:bg-gray-900 text-black dark:text-gray-100 font-serif antialiased;
     font-feature-settings: "kern", "liga";
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3 {
+    padding-bottom: 1px;
+  }
+
+  h4 {
+    padding-bottom: 1px;
+    font-weight: bold;
+  }
+
+  h5,
+  h6 {
     @apply font-serif font-bold tracking-tight;
   }
 }
 
 @layer utilities {
   .glass-nav {
-    @apply backdrop-blur-md bg-white/70 border-b border-white/20 z-50;
+    @apply backdrop-blur-md bg-white/40 dark:bg-gray-900/40 border-b border-gray-200/20 dark:border-gray-800/20 z-50;
   }
+}
+
+@layer base {
+  ul {
+    @apply list-disc pl-6;
+  }
+
+  ol {
+    @apply list-decimal pl-6;
+  }
+}
+
+@layer components {
+  .site-footer ul {
+    @apply list-none pl-0;
+  }
+
+  .footer-link {
+    @apply relative inline-block text-gray-600 dark:text-gray-400 transition-colors duration-300;
+  }
+
+  .footer-link::after {
+    content: "";
+    @apply absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300;
+  }
+
+  .footer-link:hover {
+    @apply text-primary;
+  }
+
+  .footer-link:hover::after {
+    width: 100%;
+  }
+}
+
+/* Partner Logo Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
 }

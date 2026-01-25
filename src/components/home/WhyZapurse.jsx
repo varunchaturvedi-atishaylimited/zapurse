@@ -26,7 +26,7 @@ const features = [
 
 export default function WhyZapurse() {
     return (
-        <section className="py-24 bg-secondary dark:bg-black transition-colors">
+        <section className="py-24 bg-transparent transition-colors relative">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Why Choose Zapurse?</h2>

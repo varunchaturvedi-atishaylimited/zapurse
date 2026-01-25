@@ -3,6 +3,7 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import WhatsAppButton from './components/layout/WhatsAppButton';
 import ScrollToTop from './components/layout/ScrollToTop';
+import PageBackground from './components/layout/PageBackground';
 
 import Home from './pages/Home';
 
@@ -23,7 +24,8 @@ function App() {
     return (
         <Router>
             <ScrollToTop />
-            <div className="flex flex-col min-h-screen font-serif">
+            <PageBackground />
+            <div className="flex flex-col min-h-screen font-serif relative z-10">
                 <Navbar />
                 <main className="flex-grow">
                     <Routes>

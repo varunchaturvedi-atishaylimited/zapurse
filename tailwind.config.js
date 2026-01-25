@@ -7,6 +7,15 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        scroll: 'scroll 20s linear infinite',
+      },
       fontFamily: {
         serif: ['"Times New Roman"', 'Times', 'serif'],
         sans: ['"Times New Roman"', 'Times', 'serif'], // Setting sans to Times New Roman as requested for headings + body
