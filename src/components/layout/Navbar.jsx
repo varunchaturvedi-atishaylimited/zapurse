@@ -8,7 +8,7 @@ import ThemeToggle from './ThemeToggle';
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [servicesOpen, setServicesOpen] = useState(false);
+    const [openDropdown, setOpenDropdown] = useState(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -41,6 +41,16 @@ export default function Navbar() {
                 { name: 'DTH Recharge', path: '/services#dth' },
             ]
         },
+        {
+            name: 'Zapurse Policies',
+            path: '#',
+            isDropdown: true,
+            items: [
+                { name: 'Privacy Policy', path: '/legal/privacy' },
+                { name: 'Terms and Conditions', path: '/legal/terms' },
+                { name: 'Refund & Cancellation', path: '/legal/refund' },
+            ]
+        },
         { name: 'About Us', path: '/about' },
         { name: 'Contact', path: '/contact' },
     ];
@@ -57,7 +67,9 @@ export default function Navbar() {
 
                 {/* Logo - Left */}
                 <Link to="/" className="text-2xl font-bold tracking-tighter text-black dark:text-white flex items-center gap-2">
-                    <span className="text-primary text-3xl">Zapurse</span>
+                    <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#080F4A] to-[#182B0C] dark:from-white dark:to-gray-400">
+                        Zapurse
+                    </span>
                 </Link>
 
                 {/* Desktop Nav Links - Center */}
@@ -65,7 +77,7 @@ export default function Navbar() {
                     {navLinks.map((link) => (
                         <div key={link.name} className="relative group">
                             {link.isDropdown ? (
-                                <div className="flex items-center gap-1 cursor-pointer py-2 text-black dark:text-white hover:text-primary dark:hover:text-primary transition-colors">
+                                <div className="flex items-center gap-1 cursor-pointer py-2 text-black dark:text-white hover:text-[#080F4A] dark:hover:text-green-400 transition-colors">
                                     <span className="font-medium whitespace-nowrap">{link.name}</span>
                                     <ChevronDown size={14} />
 
@@ -75,7 +87,7 @@ export default function Navbar() {
                                             <Link
                                                 key={item.name}
                                                 to={item.path}
-                                                className="block px-4 py-3 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary dark:hover:text-primary border-b border-gray-50 dark:border-gray-800 last:border-none transition-colors whitespace-nowrap"
+                                                className="block px-4 py-3 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-green-900/30 hover:text-[#080F4A] dark:hover:text-green-400 border-b border-gray-50 dark:border-gray-800 last:border-none transition-colors whitespace-nowrap"
                                             >
                                                 {item.name}
                                             </Link>
@@ -85,7 +97,7 @@ export default function Navbar() {
                             ) : (
                                 <Link
                                     to={link.path}
-                                    className="text-black dark:text-white hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap"
+                                    className="text-black dark:text-white hover:text-[#080F4A] dark:hover:text-green-400 transition-colors font-medium whitespace-nowrap"
                                 >
                                     {link.name}
                                 </Link>
@@ -132,20 +144,20 @@ export default function Navbar() {
                                     {link.isDropdown ? (
                                         <div className="flex flex-col">
                                             <button
-                                                onClick={() => setServicesOpen(!servicesOpen)}
+                                                onClick={() => setOpenDropdown(openDropdown === link.name ? null : link.name)}
                                                 className="flex items-center justify-between w-full font-semibold text-black dark:text-white"
                                             >
                                                 {link.name}
-                                                <ChevronDown size={20} className={cn("transition-transform", servicesOpen && "rotate-180")} />
+                                                <ChevronDown size={20} className={cn("transition-transform", openDropdown === link.name && "rotate-180")} />
                                             </button>
-                                            {servicesOpen && (
-                                                <div className="flex flex-col pl-4 mt-4 space-y-3 border-l-2 border-gray-100 dark:border-gray-800 ml-1">
+                                            {openDropdown === link.name && (
+                                                <div className="flex flex-col pl-4 mt-4 space-y-3 border-l-2 border-[#182B0C]/30 ml-1">
                                                     {link.items.map(item => (
                                                         <Link
                                                             key={item.name}
                                                             to={item.path}
                                                             onClick={() => setMobileMenuOpen(false)}
-                                                            className="text-lg text-gray-600 dark:text-gray-400"
+                                                            className="text-lg text-[#182B0C]/70 dark:text-green-400/80 hover:text-[#182B0C] dark:hover:text-green-300 transition-colors font-medium"
                                                         >
                                                             {item.name}
                                                         </Link>

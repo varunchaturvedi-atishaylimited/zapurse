@@ -15,6 +15,7 @@ export default {
       },
       animation: {
         scroll: 'scroll 20s linear infinite',
+        'spin-slow': 'spin 8s linear infinite',
       },
       fontFamily: {
         serif: ['"Times New Roman"', 'Times', 'serif'],
@@ -22,12 +23,12 @@ export default {
       },
       colors: {
         primary: {
-          DEFAULT: "#0071e3",
+          DEFAULT: "#080F4A",
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#f5f5f7", // Apple-like light gray
-          foreground: "#1d1d1f",
+          DEFAULT: "#182B0C",
+          foreground: "#ffffff",
         },
         accent: {
           DEFAULT: "#000000",

@@ -1,29 +1,32 @@
 import { motion } from 'framer-motion';
-import { Target, Eye, Globe2, Trophy } from 'lucide-react';
+import { Target, Eye, Globe2, Trophy, ShieldCheck, MapPin } from 'lucide-react';
 
 export default function About() {
     return (
         <div className="pt-24 min-h-screen pb-20 bg-transparent transition-colors">
             {/* Hero Section */}
-            <section className="relative py-20 bg-secondary/50 dark:bg-gray-800/30 overflow-hidden rounded-3xl mx-4 md:mx-6 mb-12 border border-blue-100/50 dark:border-gray-800">
+            {/* Hero Section */}
+            <section className="relative py-24 bg-[#182B0C]/5 dark:bg-[#0d1a0d] overflow-hidden rounded-[3rem] mx-4 md:mx-6 mb-16 border border-[#182B0C]/10 dark:border-green-900/20">
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="max-w-4xl mx-auto text-center"
                     >
-                        <h1 className="text-4xl md:text-6xl font-bold mb-8 text-gray-900 dark:text-white">Empowering Every Indian with Digital Financial Freedom</h1>
-                        <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-                            Zapurse, the digital arm of Atishay Limited, is on a mission to bridge the digital divide by bringing essential banking and financial services to the last mile.
+                        <h1 className="text-5xl md:text-7xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-[#080F4A] to-[#182B0C] dark:from-white dark:to-green-400 tracking-tighter leading-none">
+                            Empowering Every Indian with Digital Freedom
+                        </h1>
+                        <p className="text-2xl text-gray-700 dark:text-green-100/60 leading-relaxed font-medium">
+                            Zapurse, the digital arm of Atishay Limited, is bridging the divide by bringing essential banking to the last mile.
                         </p>
                     </motion.div>
                 </div>
             </section>
 
             {/* Stats Section */}
-            <section className="py-16 border-b border-gray-100 dark:border-gray-800">
+            <section className="py-20 border-b border-[#182B0C]/10 dark:border-green-900/10">
                 <div className="container mx-auto px-4 md:px-6">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
                         {[
                             { label: "Retail Partners", value: "50,000+" },
                             { label: "Distributors", value: "500+" },
@@ -37,8 +40,8 @@ export default function About() {
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
                             >
-                                <div className="text-3xl md:text-5xl font-bold text-primary mb-2">{stat.value}</div>
-                                <div className="text-gray-500 dark:text-gray-400 font-medium">{stat.label}</div>
+                                <div className="text-4xl md:text-6xl font-black text-[#080F4A] dark:text-green-400 mb-3 tracking-tighter">{stat.value}</div>
+                                <div className="text-gray-500 dark:text-gray-400 font-bold uppercase tracking-widest text-xs">{stat.label}</div>
                             </motion.div>
                         ))}
                     </div>
@@ -46,31 +49,33 @@ export default function About() {
             </section>
 
             {/* Mission & Vision */}
-            <section className="py-24">
+            <section className="py-32">
                 <div className="container mx-auto px-4 md:px-6">
-                    <div className="grid md:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-20 items-start">
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="space-y-8"
+                            className="space-y-10"
                         >
-                            <div className="bg-blue-50 dark:bg-blue-900/10 p-8 rounded-3xl border border-blue-100 dark:border-blue-900/30">
-                                <div className="flex items-center gap-4 mb-4">
-                                    <div className="p-3 bg-blue-600 text-white rounded-xl"><Target size={24} /></div>
-                                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Our Mission</h2>
+                            <div className="p-10 rounded-[2.5rem] bg-white dark:bg-[#0d1a0d] border border-gray-100 dark:border-green-900/30 shadow-2xl relative overflow-hidden group">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700" />
+                                <div className="flex items-center gap-6 mb-6">
+                                    <div className="p-4 bg-[#080F4A] text-white rounded-2xl shadow-xl"><Target size={32} /></div>
+                                    <h2 className="text-3xl font-black text-[#080F4A] dark:text-white">Our Mission</h2>
                                 </div>
-                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                <p className="text-lg text-gray-700 dark:text-green-100/70 leading-relaxed">
                                     To create the largest and most trusted network of technology-enabled agents who provide every citizen with easy access to financial services, regardless of their location.
                                 </p>
                             </div>
 
-                            <div className="bg-purple-50 dark:bg-purple-900/10 p-8 rounded-3xl border border-purple-100 dark:border-purple-900/30">
-                                <div className="flex items-center gap-4 mb-4">
-                                    <div className="p-3 bg-purple-600 text-white rounded-xl"><Eye size={24} /></div>
-                                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Our Vision</h2>
+                            <div className="p-10 rounded-[2.5rem] bg-gradient-to-br from-[#182B0C] to-[#080F4A] text-white shadow-2xl relative overflow-hidden group">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700" />
+                                <div className="flex items-center gap-6 mb-6 relative z-10">
+                                    <div className="p-4 bg-white/10 rounded-2xl backdrop-blur-md border border-white/20"><Eye size={32} /></div>
+                                    <h2 className="text-3xl font-black">Our Vision</h2>
                                 </div>
-                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                <p className="text-lg text-white/80 leading-relaxed relative z-10">
                                     A digitally inclusive India where banking, payments, and government services are available at every doorstep, driving economic growth and empowerment.
                                 </p>
                             </div>
@@ -80,28 +85,30 @@ export default function About() {
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
+                            className="lg:pt-10"
                         >
-                            <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">About Atishay Limited</h2>
-                            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                                Zapurse is a flagship brand of Atishay Limited, a technology-driven company listed on the Bombay Stock Exchange (BSE). With decades of experience in e-governance and retail network management, Atishay Limited brings credibility, security, and operational excellence to the fintech space.
-                            </p>
-                            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-                                We leverage our deep understanding of rural and semi-urban markets to design solutions that are simple, reliable, and profitable for our partners.
-                            </p>
+                            <h2 className="text-4xl md:text-5xl font-black mb-8 text-[#080F4A] dark:text-white tracking-tighter">About Atishay Limited</h2>
+                            <div className="space-y-6">
+                                <p className="text-lg text-gray-600 dark:text-green-100/60 leading-relaxed">
+                                    Zapurse is a flagship brand of Atishay Limited, a technology-driven company listed on the Bombay Stock Exchange (BSE). With decades of experience in e-governance and retail network management, Atishay Limited brings credibility and security.
+                                </p>
+                                <p className="text-lg text-gray-600 dark:text-green-100/60 leading-relaxed">
+                                    We leverage our deep understanding of rural and semi-urban markets to design solutions that are simple, reliable, and profitable for our partners.
+                                </p>
+                            </div>
 
-                            <div className="grid grid-cols-2 gap-4">
-                                <div className="flex items-center gap-3 text-gray-800 dark:text-gray-200 font-semibold">
-                                    <div className="w-2 h-2 rounded-full bg-green-500"></div> BSE Listed Company
-                                </div>
-                                <div className="flex items-center gap-3 text-gray-800 dark:text-gray-200 font-semibold">
-                                    <div className="w-2 h-2 rounded-full bg-green-500"></div> ISO 27001 Certified
-                                </div>
-                                <div className="flex items-center gap-3 text-gray-800 dark:text-gray-200 font-semibold">
-                                    <div className="w-2 h-2 rounded-full bg-green-500"></div> CMMI Level 3
-                                </div>
-                                <div className="flex items-center gap-3 text-gray-800 dark:text-gray-200 font-semibold">
-                                    <div className="w-2 h-2 rounded-full bg-green-500"></div> Pan-India Presence
-                                </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
+                                {[
+                                    { label: "BSE Listed Company", icon: <Globe2 className="text-green-500" /> },
+                                    { label: "ISO 27001 Certified", icon: <Trophy className="text-green-500" /> },
+                                    { label: "CMMI Level 3", icon: <ShieldCheck className="text-green-500" /> },
+                                    { label: "Pan-India Presence", icon: <MapPin className="text-green-500" /> }
+                                ].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-[#0d1a0d] border border-gray-100 dark:border-green-900/30 shadow-sm">
+                                        <div className="p-2 bg-green-500/10 rounded-lg">{item.icon}</div>
+                                        <span className="font-bold text-[#080F4A] dark:text-white">{item.label}</span>
+                                    </div>
+                                ))}
                             </div>
                         </motion.div>
                     </div>
