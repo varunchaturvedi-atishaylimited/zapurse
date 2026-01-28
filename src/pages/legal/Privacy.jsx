@@ -30,7 +30,7 @@ export default function Privacy() {
                                 <ul className="grid md:grid-cols-2 gap-2 list-none pl-0">
                                     {["Full Name", "Mobile Number", "Email Address", "Address (optional)", "KYC information (if required for certain services)", "Transaction details (recharge, DTH, bill payments)"].map((item, i) => (
                                         <li key={i} className="flex items-center gap-2">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                                            <div className="w-1.5 h-1.5 rounded-full bg-gray-300" />
                                             {item}
                                         </li>
                                     ))}
@@ -43,7 +43,7 @@ export default function Privacy() {
                                 <ul className="grid md:grid-cols-2 gap-2 list-none pl-0">
                                     {["Device information (model, operating system, app version)", "IP address", "Approximate location (if enabled on your device)", "Usage data (features used, interactions, logs)"].map((item, i) => (
                                         <li key={i} className="flex items-center gap-2">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                                            <div className="w-1.5 h-1.5 rounded-full bg-gray-300" />
                                             {item}
                                         </li>
                                     ))}
@@ -54,9 +54,9 @@ export default function Privacy() {
                                 <h3 className="text-xl font-bold mb-3 text-[#182B0C] dark:text-green-400">Third-Party Information</h3>
                                 <p>For payment processing or telecom recharge services, we may receive information from:</p>
                                 <ul className="mt-3 space-y-2 list-none pl-0">
-                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Payment gateways</li>
-                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Telecom / DTH operators</li>
-                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Service providers and API partners</li>
+                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-gray-300" /> Payment gateways</li>
+                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-gray-300" /> Telecom / DTH operators</li>
+                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-gray-300" /> Service providers and API partners</li>
                                 </ul>
                             </div>
                         </div>

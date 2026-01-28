@@ -35,14 +35,14 @@ export default function Refund() {
                                 <h3 className="text-xl font-bold mb-4 text-[#080F4A] dark:text-red-400">Failed Transactions</h3>
                                 <p className="mb-4 font-medium">A transaction is considered failed if:</p>
                                 <ul className="space-y-2 mb-6 list-none pl-0">
-                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> The amount is deducted from your bank account, wallet, or card, and</li>
-                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> The recharge or bill payment is not successful, and</li>
-                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> The amount is not passed to the operator or service provider.</li>
+                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-gray-400" /> The amount is deducted from your bank account, wallet, or card, and</li>
+                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-gray-400" /> The recharge or bill payment is not successful, and</li>
+                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-gray-400" /> The amount is not passed to the operator or service provider.</li>
                                 </ul>
                                 <p className="mb-2 font-medium">In such cases:</p>
                                 <ul className="space-y-2 list-none pl-0">
-                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> The deducted amount will be refunded automatically to the original payment method.</li>
-                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Refund timelines generally range between 3–7 working days, depending on your bank or payment gateway.</li>
+                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-gray-400" /> The deducted amount will be refunded automatically to the original payment method.</li>
+                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-gray-400" /> Refund timelines generally range between 3–7 working days, depending on your bank or payment gateway.</li>
                                 </ul>
                             </div>
 
@@ -51,11 +51,11 @@ export default function Refund() {
                                 <p className="mb-4">If a transaction remains in pending status due to operator-side delay :</p>
                                 <ul className="space-y-3 list-none pl-0">
                                     <li className="flex gap-2">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-[#182B0C] mt-2 flex-shrink-0" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 flex-shrink-0" />
                                         The final status may take up to 24 hours.
                                     </li>
                                     <li className="flex gap-2">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-[#182B0C] mt-2 flex-shrink-0" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 flex-shrink-0" />
                                         If the operator confirms failure, the amount will be refunded automatically. But if the operator confirms success, no refund will be issued.
                                     </li>
                                 </ul>
@@ -107,9 +107,9 @@ export default function Refund() {
                             <h2 className="text-2xl font-bold mb-6 text-[#080F4A] dark:text-white">5. Disputes & Support</h2>
                             <p className="mb-4 text-sm opacity-80">If you face any issues related to a failed or pending transaction, please contact our support team with the following details:</p>
                             <ul className="text-sm font-bold space-y-1 mb-6 list-none pl-0">
-                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Transaction ID</li>
-                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Registered mobile number</li>
-                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Date and time of transaction</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-gray-400" /> Transaction ID</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-gray-400" /> Registered mobile number</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-gray-400" /> Date and time of transaction</li>
                             </ul>
                             <div className="pt-4 border-t border-gray-100 dark:border-gray-800">
                                 <p className="text-sm"><strong>Support Contact:</strong></p>

@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, MessageSquare, ArrowRight } from 'lucide-react';
+import { Particles } from '../components/ui/particles';
 
 export default function Contact() {
     return (
         <div className="pt-32 min-h-screen pb-20 bg-transparent transition-colors overflow-hidden">
+            <Particles className="absolute inset-0 z-0"
+                quantity={120}
+                ease={80}
+                color="#cbd5e1"
+                refresh />
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

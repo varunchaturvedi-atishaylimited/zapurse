@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Download, Smartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
+import { InteractiveGridPattern } from '../ui/interactive-grid-pattern';
 
 export default function Hero() {
     const heroRef = useRef(null);
@@ -53,7 +54,7 @@ export default function Hero() {
     return (
         <section ref={heroRef} className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
             <div className="container mx-auto px-4 md:px-6 z-10 grid md:grid-cols-2 gap-12 items-center">
-
+                <InteractiveGridPattern />
                 {/* Text Content */}
                 <div ref={contentRef} className="text-center md:text-left space-y-6">
                     <div className="hero-text-child">

@@ -38,7 +38,7 @@ const partners = [
 
 export default function PartnersAndTestimonials() {
     return (
-        <section className="py-24 bg-transparent transition-colors relative">
+        <section className="py-20 bg-transparent transition-colors relative">
             <div className="container mx-auto px-4 md:px-6">
 
                 {/* Partners Auto-scroll */}
@@ -67,7 +67,7 @@ export default function PartnersAndTestimonials() {
 
 
                 {/* Testimonials */}
-                <div className="max-w-6xl mx-auto">
+                <div className="max-w-6xl mx-auto mb-5">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Trusted by thousands</h2>
                         <p className="text-lg text-gray-600 dark:text-gray-300">Hear from our partners about their journey with Zapurse.</p>

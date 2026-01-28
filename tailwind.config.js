@@ -7,35 +7,32 @@ export default {
   ],
   theme: {
     extend: {
-      keyframes: {
-        scroll: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
+      colors: {
+        border: "hsl(var(--border))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "#ffffff",
         },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "#000000",
+        },
+      },
+      fontFamily: {
+        serif: ['"Times New Roman"', 'Times', 'serif'],
+        sans: ['"Times New Roman"', 'Times', 'serif'],
       },
       animation: {
         scroll: 'scroll 20s linear infinite',
         'spin-slow': 'spin 8s linear infinite',
       },
-      fontFamily: {
-        serif: ['"Times New Roman"', 'Times', 'serif'],
-        sans: ['"Times New Roman"', 'Times', 'serif'], // Setting sans to Times New Roman as requested for headings + body
-      },
-      colors: {
-        primary: {
-          DEFAULT: "#080F4A",
-          foreground: "#ffffff",
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
-        secondary: {
-          DEFAULT: "#182B0C",
-          foreground: "#000000",
-        },
-        accent: {
-          DEFAULT: "#000000",
-          foreground: "#ffffff",
-        },
-        background: "#ffffff",
-        foreground: "#000000",
       },
     },
   },

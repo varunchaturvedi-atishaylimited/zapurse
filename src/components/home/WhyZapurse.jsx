@@ -26,7 +26,7 @@ const features = [
 
 export default function WhyZapurse() {
     return (
-        <section className="py-32 bg-transparent transition-colors relative overflow-hidden">
+        <section className="pt-32 mb-10 bg-transparent transition-colors relative overflow-hidden">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <h2 className="text-4xl md:text-6xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-[#080F4A] to-[#182B0C] dark:from-white dark:to-green-400 tracking-tighter">

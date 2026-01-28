@@ -59,8 +59,13 @@ export default function Navbar() {
         <nav
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-                mobileMenuOpen ? "bg-white dark:bg-gray-950 shadow-lg" : (isScrolled ? "glass-nav py-3" : "bg-transparent py-5")
+                mobileMenuOpen
+                    ? "bg-background shadow-lg"
+                    : isScrolled
+                        ? "bg-background/80 backdrop-blur-md py-3 border-b border-border"
+                        : "bg-transparent py-5"
             )}
+
         >
             {/* Main Container using grid for proper alignment */}
             <div className="container mx-auto px-4 md:px-6 grid grid-cols-[auto_1fr_auto] items-center">

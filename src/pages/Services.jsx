@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Smartphone, Monitor, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Particles } from '../components/ui/particles';
 
 const services = [
     {
@@ -17,15 +18,22 @@ const services = [
         description: 'Seamless DTH recharges for Tata Play, Dish TV, Videocon d2h, Sun Direct, and Airtel Digital TV.',
         features: ['All providers supported', 'Instant activation', 'Best commissions'],
         icon: <Monitor size={40} />,
-        color: 'bg-purple-600',
+        color: 'bg-[#1cb554]',
     },
 ];
 
 export default function Services() {
     return (
-        <div className="pt-24 min-h-screen bg-transparent pb-20 transition-colors">
+        <div className="pt-32 min-h-screen pb-20 bg-transparent transition-colors overflow-hidden">
+            <Particles className="absolute inset-0 z-0"
+                quantity={120}
+                ease={80}
+                color="#cbd5e1"
+                refresh />
             <div className="container mx-auto px-4 md:px-6 relative z-10">
+
                 <div className="text-center max-w-3xl mx-auto mb-16">
+
                     <motion.h1
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
