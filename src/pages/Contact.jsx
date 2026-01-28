@@ -28,7 +28,7 @@ export default function Contact() {
                     >
                         <div className="space-y-8">
                             <h3 className="text-3xl font-black text-[#080F4A] dark:text-white flex items-center gap-3">
-                                <span className="w-2 h-8 bg-secondary rounded-full" />
+                                <span className="w-2 h-8 bg-secondary dark:bg-white rounded-full" />
                                 Contact Information
                             </h3>
                             <div className="grid gap-8">
@@ -98,41 +98,44 @@ export default function Contact() {
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="p-10 md:p-14 rounded-[3rem] bg-white dark:bg-[#0d1a0d] border border-[#182B0C]/10 dark:border-green-900/30 shadow-2xl relative overflow-hidden"
+                        className="p-10 md:p-14 rounded-[2.5rem] bg-gradient-to-br from-[#182B0C] to-[#080F4A] text-white shadow-2xl relative overflow-hidden group"
                     >
-                        <h3 className="text-3xl font-black mb-10 text-[#080F4A] dark:text-white">Send us a Message</h3>
-                        <form className="space-y-8 relative z-10">
-                            <div className="grid md:grid-cols-2 gap-8">
-                                <div className="space-y-3">
-                                    <label className="text-sm font-black text-[#080F4A]/60 dark:text-green-300/100 uppercase tracking-widest">First Name</label>
-                                    <input type="text" className="w-full px-6 py-4 rounded-2xl border border-gray-100 dark:border-green-900/30 bg-gray-100 dark:bg-black/40 text-[#080F4A] dark:text-white focus:border-[#182B0C] focus:ring-4 focus:ring-[#182B0C]/5 outline-none transition-all placeholder:opacity-30" placeholder="John" />
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700 pointer-events-none"></div>
+                        <div className="relative z-10">
+                            <h3 className="text-3xl font-black mb-10">Send us a Message</h3>
+                            <form className="space-y-8 relative z-10">
+                                <div className="grid md:grid-cols-2 gap-8">
+                                    <div className="space-y-3">
+                                        <label className="text-sm font-black text-white/100 uppercase tracking-widest">First Name</label>
+                                        <input type="text" className="w-full px-6 py-4 rounded-2xl border border-white/10 bg-white/5 text-white focus:border-white/30 focus:ring-4 focus:ring-white/5 outline-none transition-all placeholder:text-white/20" placeholder="John" />
+                                    </div>
+                                    <div className="space-y-3">
+                                        <label className="text-sm font-black text-white/100 uppercase tracking-widest">Last Name</label>
+                                        <input type="text" className="w-full px-6 py-4 rounded-2xl border border-white/10 bg-white/5 text-white focus:border-white/30 focus:ring-4 focus:ring-white/5 outline-none transition-all placeholder:text-white/20" placeholder="Doe" />
+                                    </div>
                                 </div>
+
                                 <div className="space-y-3">
-                                    <label className="text-sm font-black text-[#080F4A]/60 dark:text-green-300/100 uppercase tracking-widest">Last Name</label>
-                                    <input type="text" className="w-full px-6 py-4 rounded-2xl border border-gray-100 dark:border-green-900/30 bg-gray-100 dark:bg-black/40 text-[#080F4A] dark:text-white focus:border-[#182B0C] focus:ring-4 focus:ring-[#182B0C]/5 outline-none transition-all placeholder:opacity-30" placeholder="Doe" />
+                                    <label className="text-sm font-black text-white/100 uppercase tracking-widest">Email Address</label>
+                                    <input type="email" className="w-full px-6 py-4 rounded-2xl border border-white/10 bg-white/5 text-white focus:border-white/30 focus:ring-4 focus:ring-white/5 outline-none transition-all placeholder:text-white/20" placeholder="john@example.com" />
                                 </div>
-                            </div>
 
-                            <div className="space-y-3">
-                                <label className="text-sm font-black text-[#080F4A]/60 dark:text-green-300/100 uppercase tracking-widest">Email Address</label>
-                                <input type="email" className="w-full px-6 py-4 rounded-2xl border border-gray-100 dark:border-green-900/30 bg-gray-100 dark:bg-black/40 text-[#080F4A] dark:text-white focus:border-[#182B0C] focus:ring-4 focus:ring-[#182B0C]/5 outline-none transition-all placeholder:opacity-30" placeholder="john@example.com" />
-                            </div>
+                                <div className="space-y-3">
+                                    <label className="text-sm font-black text-white/100 uppercase tracking-widest">Phone Number</label>
+                                    <input type="tel" className="w-full px-6 py-4 rounded-2xl border border-white/10 bg-white/5 text-white focus:border-white/30 focus:ring-4 focus:ring-white/5 outline-none transition-all placeholder:text-white/20" placeholder="+91 98765 00000" />
+                                </div>
 
-                            <div className="space-y-3">
-                                <label className="text-sm font-black text-[#080F4A]/60 dark:text-green-300/100 uppercase tracking-widest">Phone Number</label>
-                                <input type="tel" className="w-full px-6 py-4 rounded-2xl border border-gray-100 dark:border-green-900/30 bg-gray-100 dark:bg-black/40 text-[#080F4A] dark:text-white focus:border-[#182B0C] focus:ring-4 focus:ring-[#182B0C]/5 outline-none transition-all placeholder:opacity-30" placeholder="+91 98765 00000" />
-                            </div>
+                                <div className="space-y-3">
+                                    <label className="text-sm font-black text-white/100 uppercase tracking-widest">Message</label>
+                                    <textarea className="w-full px-6 py-4 rounded-2xl border border-white/10 bg-white/5 text-white focus:border-white/30 focus:ring-4 focus:ring-white/5 outline-none transition-all min-h-[140px] resize-none placeholder:text-white/20" placeholder="How can we help you?"></textarea>
+                                </div>
 
-                            <div className="space-y-3">
-                                <label className="text-sm font-black text-[#080F4A]/60 dark:text-green-300/100 uppercase tracking-widest">Message</label>
-                                <textarea className="w-full px-6 py-4 rounded-2xl border border-gray-100 dark:border-green-900/30 bg-gray-100 dark:bg-black/40 text-[#080F4A] dark:text-white focus:border-[#182B0C] focus:ring-4 focus:ring-[#182B0C]/5 outline-none transition-all min-h-[140px] resize-none placeholder:opacity-30" placeholder="How can we help you?"></textarea>
-                            </div>
-
-                            <button type="submit" className="w-full py-5 bg-[#080F4A] dark:bg-green-400 text-white dark:text-[#0d1a0d] rounded-[1.5rem] font-black text-xl hover:scale-[1.02] active:scale-95 transition-all shadow-2xl flex items-center justify-center gap-3 group">
-                                <span>Send Message</span>
-                                <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                            </button>
-                        </form>
+                                <button type="submit" className="w-full py-5 bg-white text-[#080F4A] rounded-[1.5rem] font-black text-xl hover:scale-[1.02] active:scale-95 transition-all shadow-2xl flex items-center justify-center gap-3 group relative z-10">
+                                    <span>Send Message</span>
+                                    <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                </button>
+                            </form>
+                        </div>
                     </motion.div>
                 </div>
             </div>

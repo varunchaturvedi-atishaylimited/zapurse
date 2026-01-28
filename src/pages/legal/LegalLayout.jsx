@@ -34,7 +34,7 @@ const LegalLayout = ({ title, children, lastUpdated }) => {
             <div className="fixed top-1/2 left-1/4 -z-10 w-[300px] h-[300px] bg-[#182B0C]/5 rounded-full blur-[100px]" />
 
             <div className="container mx-auto px-4 md:px-6 max-w-4xl relative">
-                <div ref={titleRef} className="mb-16 border-l-8 border-secondary pl-8 py-2">
+                <div ref={titleRef} className="mb-16 border-l-8 border-secondary dark:border-white pl-8 py-2">
                     <h1 className="text-4xl md:text-7xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#080F4A] to-[#182B0C] dark:from-white dark:to-gray-400 tracking-tighter">
                         {title}
                     </h1>

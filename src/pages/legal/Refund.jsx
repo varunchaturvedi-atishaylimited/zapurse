@@ -32,7 +32,7 @@ export default function Refund() {
 
                         <div className="space-y-8">
                             <div className="p-6 bg-primary/5 rounded-2xl border border-primary/10">
-                                <h3 className="text-xl font-bold mb-4 text-[#080F4A] dark:text-red-400">2.1 Failed Transactions</h3>
+                                <h3 className="text-xl font-bold mb-4 text-[#080F4A] dark:text-red-400">Failed Transactions</h3>
                                 <p className="mb-4 font-medium">A transaction is considered failed if:</p>
                                 <ul className="space-y-2 mb-6 list-none pl-0">
                                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> The amount is deducted from your bank account, wallet, or card, and</li>
@@ -47,7 +47,7 @@ export default function Refund() {
                             </div>
 
                             <div className="p-6 bg-secondary/5 rounded-2xl border border-secondary/10">
-                                <h3 className="text-xl font-bold mb-4 text-[#182B0C] dark:text-green-400">2.2 Pending Transactions</h3>
+                                <h3 className="text-xl font-bold mb-4 text-[#182B0C] dark:text-green-400">Pending Transactions</h3>
                                 <p className="mb-4">If a transaction remains in pending status due to operator-side delay :</p>
                                 <ul className="space-y-3 list-none pl-0">
                                     <li className="flex gap-2">

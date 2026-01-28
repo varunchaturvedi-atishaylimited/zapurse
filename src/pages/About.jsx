@@ -6,17 +6,18 @@ export default function About() {
         <div className="pt-24 min-h-screen pb-20 bg-transparent transition-colors">
             {/* Hero Section */}
             {/* Hero Section */}
-            <section className="relative py-24 bg-[#182B0C]/5 dark:bg-[#0d1a0d] overflow-hidden rounded-[3rem] mx-4 md:mx-6 mb-16 border border-[#182B0C]/10 dark:border-green-900/20">
+            <section className="relative py-24 bg-gradient-to-br from-[#182B0C] to-[#080F4A] text-white overflow-hidden rounded-[3rem] mx-4 md:mx-6 mb-16 shadow-2xl group">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700 pointer-events-none" />
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="max-w-4xl mx-auto text-center"
                     >
-                        <h1 className="text-5xl md:text-7xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-[#080F4A] to-[#182B0C] dark:from-white dark:to-green-400 tracking-tighter leading-none">
+                        <h1 className="text-5xl md:text-7xl font-black mb-8 text-white tracking-tighter leading-none">
                             Empowering Every Indian with Digital Freedom
                         </h1>
-                        <p className="text-2xl text-gray-700 dark:text-green-100/60 leading-relaxed font-medium">
+                        <p className="text-2xl text-white/80 leading-relaxed font-medium">
                             Zapurse, the digital arm of Atishay Limited, is bridging the divide by bringing essential banking to the last mile.
                         </p>
                     </motion.div>
@@ -58,13 +59,13 @@ export default function About() {
                             viewport={{ once: true }}
                             className="space-y-10"
                         >
-                            <div className="p-10 rounded-[2.5rem] bg-white dark:bg-[#0d1a0d] border border-gray-100 dark:border-green-900/30 shadow-2xl relative overflow-hidden group">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700" />
-                                <div className="flex items-center gap-6 mb-6">
-                                    <div className="p-4 bg-[#080F4A] text-white rounded-2xl shadow-xl"><Target size={32} /></div>
-                                    <h2 className="text-3xl font-black text-[#080F4A] dark:text-white">Our Mission</h2>
+                            <div className="p-10 rounded-[2.5rem] bg-gradient-to-br from-[#182B0C] to-[#080F4A] text-white shadow-2xl relative overflow-hidden group">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700" />
+                                <div className="flex items-center gap-6 mb-6 relative z-10">
+                                    <div className="p-4 bg-white/10 rounded-2xl backdrop-blur-md border border-white/20"><Target size={32} /></div>
+                                    <h2 className="text-3xl font-black text-white">Our Mission</h2>
                                 </div>
-                                <p className="text-lg text-gray-700 dark:text-green-100/70 leading-relaxed">
+                                <p className="text-lg text-white/80 leading-relaxed relative z-10">
                                     To create the largest and most trusted network of technology-enabled agents who provide every citizen with easy access to financial services, regardless of their location.
                                 </p>
                             </div>
@@ -99,14 +100,14 @@ export default function About() {
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
                                 {[
-                                    { label: "BSE Listed Company", icon: <Globe2 className="text-green-500" /> },
-                                    { label: "ISO 27001 Certified", icon: <Trophy className="text-green-500" /> },
-                                    { label: "CMMI Level 3", icon: <ShieldCheck className="text-green-500" /> },
-                                    { label: "Pan-India Presence", icon: <MapPin className="text-green-500" /> }
+                                    { label: "BSE Listed Company", icon: <Globe2 className="text-white" /> },
+                                    { label: "ISO 27001 Certified", icon: <Trophy className="text-white" /> },
+                                    { label: "CMMI Level 3", icon: <ShieldCheck className="text-white" /> },
+                                    { label: "Pan-India Presence", icon: <MapPin className="text-white" /> }
                                 ].map((item, i) => (
-                                    <div key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-[#0d1a0d] border border-gray-100 dark:border-green-900/30 shadow-sm">
-                                        <div className="p-2 bg-green-500/10 rounded-lg">{item.icon}</div>
-                                        <span className="font-bold text-[#080F4A] dark:text-white">{item.label}</span>
+                                    <div key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-br from-[#182B0C] to-[#080F4A] hover:scale-105 transition-transform duration-300 shadow-lg group">
+                                        <div className="p-2 bg-white/10 rounded-lg backdrop-blur-sm group-hover:bg-white/20 transition-colors">{item.icon}</div>
+                                        <span className="font-bold text-white tracking-wide">{item.label}</span>
                                     </div>
                                 ))}
                             </div>

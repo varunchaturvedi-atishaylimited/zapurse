@@ -81,21 +81,26 @@ export default function PartnersAndTestimonials() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.2 }}
-                                className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700"
+                                className="group relative overflow-hidden rounded-[2.5rem] p-10 bg-gradient-to-br from-[#182B0C] to-[#080F4A] shadow-lg hover:shadow-2xl transition-all duration-500"
                             >
-                                <div className="flex gap-1 mb-4">
-                                    {[...Array(5)].map((_, starIndex) => (
-                                        <Star
-                                            key={starIndex}
-                                            size={18}
-                                            className={`${starIndex < t.rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-200 dark:text-gray-600'}`}
-                                        />
-                                    ))}
-                                </div>
-                                <p className="text-gray-700 dark:text-gray-300 mb-6 italic">"{t.text}"</p>
-                                <div>
-                                    <div className="font-bold text-lg text-gray-900 dark:text-white">{t.name}</div>
-                                    <div className="text-sm text-gray-400">{t.role}</div>
+                                {/* Decorative background blob */}
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700 pointer-events-none"></div>
+
+                                <div className="relative z-10">
+                                    <div className="flex gap-1 mb-6">
+                                        {[...Array(5)].map((_, starIndex) => (
+                                            <Star
+                                                key={starIndex}
+                                                size={18}
+                                                className={`${starIndex < t.rating ? 'fill-yellow-400 text-yellow-400' : 'text-white/20'}`}
+                                            />
+                                        ))}
+                                    </div>
+                                    <p className="text-white/80 mb-8 italic text-lg leading-relaxed">"{t.text}"</p>
+                                    <div>
+                                        <div className="font-bold text-xl text-white">{t.name}</div>
+                                        <div className="text-sm text-white/50 font-medium tracking-wide">{t.role}</div>
+                                    </div>
                                 </div>
                             </motion.div>
                         ))}

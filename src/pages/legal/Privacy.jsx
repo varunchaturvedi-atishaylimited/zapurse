@@ -19,13 +19,13 @@ export default function Privacy() {
                 <div className="grid gap-8">
                     <section className="p-8 rounded-[2rem] bg-white dark:bg-gray-800/40 border border-gray-100 dark:border-gray-800 shadow-sm">
                         <h2 className="text-2xl font-bold mb-6 text-[#080F4A] dark:text-white flex items-center gap-3">
-                            <span className="w-2 h-8 bg-secondary rounded-full" />
+                            <span className="w-2 h-8 bg-secondary dark:bg-white rounded-full" />
                             1. Information We Collect
                         </h2>
 
                         <div className="space-y-6">
                             <div>
-                                <h3 className="text-xl font-bold mb-3 text-[#182B0C] dark:text-green-400">1.1 Personal Information</h3>
+                                <h3 className="text-xl font-bold mb-3 text-[#182B0C] dark:text-green-400">Personal Information</h3>
                                 <p className="mb-4">We may collect the following details when you register or use our services:</p>
                                 <ul className="grid md:grid-cols-2 gap-2 list-none pl-0">
                                     {["Full Name", "Mobile Number", "Email Address", "Address (optional)", "KYC information (if required for certain services)", "Transaction details (recharge, DTH, bill payments)"].map((item, i) => (
@@ -38,7 +38,7 @@ export default function Privacy() {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold mb-3 text-[#182B0C] dark:text-green-400">1.2 Automatically Collected Information</h3>
+                                <h3 className="text-xl font-bold mb-3 text-[#182B0C] dark:text-green-400">Automatically Collected Information</h3>
                                 <p className="mb-4">When you use the App, we may automatically collect:</p>
                                 <ul className="grid md:grid-cols-2 gap-2 list-none pl-0">
                                     {["Device information (model, operating system, app version)", "IP address", "Approximate location (if enabled on your device)", "Usage data (features used, interactions, logs)"].map((item, i) => (
@@ -51,7 +51,7 @@ export default function Privacy() {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold mb-3 text-[#182B0C] dark:text-green-400">1.3 Third-Party Information</h3>
+                                <h3 className="text-xl font-bold mb-3 text-[#182B0C] dark:text-green-400">Third-Party Information</h3>
                                 <p>For payment processing or telecom recharge services, we may receive information from:</p>
                                 <ul className="mt-3 space-y-2 list-none pl-0">
                                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Payment gateways</li>
@@ -64,7 +64,7 @@ export default function Privacy() {
 
                     <section className="p-8 rounded-[2rem] bg-white dark:bg-gray-800/40 border border-gray-100 dark:border-gray-800 shadow-sm">
                         <h2 className="text-2xl font-bold mb-6 text-[#080F4A] dark:text-white flex items-center gap-3">
-                            <span className="w-2 h-8 bg-secondary rounded-full" />
+                            <span className="w-2 h-8 bg-secondary dark:bg-white rounded-full" />
                             2. How We Use Your Information
                         </h2>
                         <p className="mb-4">We use the collected information to:</p>
@@ -82,12 +82,12 @@ export default function Privacy() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="mt-6 font-semibold italic text-primary">We do not sell or rent your personal information to any third party.</p>
+                        <p className="mt-6 font-semibold italic text-[#080F4A] dark:text-green-400">We do not sell or rent your personal information to any third party.</p>
                     </section>
 
                     <section className="p-8 rounded-[2rem] bg-white dark:bg-gray-800/40 border border-gray-100 dark:border-gray-800 shadow-sm">
                         <h2 className="text-2xl font-bold mb-6 text-[#080F4A] dark:text-white flex items-center gap-3">
-                            <span className="w-2 h-8 bg-[#182B0C] rounded-full" />
+                            <span className="w-2 h-8 bg-secondary dark:bg-white rounded-full" />
                             3. Sharing of Information
                         </h2>
                         <p className="mb-4">We may share your information only with:</p>
@@ -108,7 +108,8 @@ export default function Privacy() {
                     </section>
 
                     <section className="p-8 rounded-[2rem] bg-white dark:bg-gray-800/40 border border-gray-100 dark:border-gray-800 shadow-sm">
-                        <h2 className="text-2xl font-bold mb-4 text-[#080F4A] dark:text-white">4. Data Security</h2>
+
+                        <h2 className="text-2xl font-bold mb-4 text-[#080F4A] dark:text-white flex items-center gap-3"><span className="w-2 h-8 bg-secondary dark:bg-white rounded-full" /> 4. Data Security</h2>
                         <p className="mb-4">We use industry-standard security measures, including:</p>
                         <ul className="list-disc pl-6 space-y-2 mb-4">
                             <li>Encryption of sensitive data</li>
@@ -119,7 +120,7 @@ export default function Privacy() {
                     </section>
 
                     <section className="p-8 rounded-[2rem] bg-white dark:bg-gray-800/40 border border-gray-100 dark:border-gray-800 shadow-sm">
-                        <h2 className="text-2xl font-bold mb-4 text-[#080F4A] dark:text-white">5. Cookies & Tracking Technologies</h2>
+                        <h2 className="text-2xl font-bold mb-4 text-[#080F4A] dark:text-white flex items-center gap-3"><span className="w-2 h-8 bg-secondary dark:bg-white rounded-full" /> 5. Cookies & Tracking Technologies</h2>
                         <p className="mb-4">We may use cookies and similar technologies to:</p>
                         <ul className="list-disc pl-6 space-y-2 mb-4">
                             <li>Improve app performance</li>
@@ -130,7 +131,7 @@ export default function Privacy() {
                     </section>
 
                     <section className="p-8 rounded-[2rem] bg-white dark:bg-gray-800/40 border border-gray-100 dark:border-gray-800 shadow-sm">
-                        <h2 className="text-2xl font-bold mb-4 text-[#080F4A] dark:text-white">6. Your Rights & Choices</h2>
+                        <h2 className="text-2xl font-bold mb-4 text-[#080F4A] dark:text-white flex items-center gap-3"><span className="w-2 h-8 bg-secondary dark:bg-white rounded-full" /> 6. Your Rights & Choices</h2>
                         <p className="mb-4">You may:</p>
                         <ul className="list-disc pl-6 space-y-2 mb-4">
                             <li>Update or edit your profile information</li>
@@ -144,17 +145,17 @@ export default function Privacy() {
 
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="p-8 rounded-[2rem] bg-white dark:bg-gray-800/40 border border-gray-100 dark:border-gray-800 shadow-sm">
-                            <h2 className="text-xl font-bold mb-4 text-[#080F4A] dark:text-white">7. Children’s Privacy</h2>
+                            <h2 className="text-xl font-bold mb-4 text-[#080F4A] dark:text-white flex items-center gap-3"><span className="w-2 h-8 bg-secondary dark:bg-white rounded-full" /> 7. Children’s Privacy</h2>
                             <p className="text-sm opacity-80">Zapurse is not intended for use by children under the age of 18. We do not knowingly collect personal information from children.</p>
                         </div>
                         <div className="p-8 rounded-[2rem] bg-white dark:bg-gray-800/40 border border-gray-100 dark:border-gray-800 shadow-sm">
-                            <h2 className="text-xl font-bold mb-4 text-[#080F4A] dark:text-white">8. Links to Third-Party Sites</h2>
+                            <h2 className="text-xl font-bold mb-4 text-[#080F4A] dark:text-white flex items-center gap-3"><span className="w-2 h-8 bg-secondary dark:bg-white rounded-full" /> 8. Links to Third-Party Sites</h2>
                             <p className="text-sm opacity-80">The App may contain links to external websites or services. Zapurse is not responsible for the privacy practices of those platforms.</p>
                         </div>
                     </div>
 
                     <section className="p-8 rounded-[2rem] bg-white dark:bg-gray-800/40 border border-gray-100 dark:border-gray-800 shadow-sm">
-                        <h2 className="text-2xl font-bold mb-4 text-[#080F4A] dark:text-white">9. Changes to This Privacy Policy</h2>
+                        <h2 className="text-2xl font-bold mb-4 text-[#080F4A] dark:text-white flex items-center gap-3"><span className="w-2 h-8 bg-secondary dark:bg-white rounded-full" /> 9. Changes to This Privacy Policy</h2>
                         <p className="text-sm opacity-80">
                             We may update this Privacy Policy from time to time.
                             Any changes will be posted within the App.
