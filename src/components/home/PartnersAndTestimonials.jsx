@@ -56,7 +56,10 @@ export default function PartnersAndTestimonials() {
                     </div>
                 </div>
 
+
                 {/* Testimonials */}
+                <h2 className="text-center md:text-5xl mb-6">Trusted by thousands</h2>
+                <p className="text-center mb-10 text-gray-900">Hear from our partners about their journey with Zapurse.</p>
                 <div className="grid md:grid-cols-3 gap-8">
                     {testimonials.map((t, i) => (
                         <motion.div
@@ -78,8 +81,8 @@ export default function PartnersAndTestimonials() {
                                             key={starIndex}
                                             size={18}
                                             className={`${starIndex < t.rating
-                                                    ? 'fill-yellow-400 text-yellow-400'
-                                                    : 'text-white/20'
+                                                ? 'fill-yellow-400 text-yellow-400'
+                                                : 'text-white/20'
                                                 }`}
                                         />
                                     ))}

@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils"
 export function InteractiveGridPattern({
   width = 80,
   height = 80,
-  squares = [24, 24],
+  squares = [32, 32],
   className,
   squaresClassName,
   ...props

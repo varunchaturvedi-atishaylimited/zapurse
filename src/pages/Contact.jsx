@@ -99,7 +99,7 @@ export default function Contact() {
                                     href="https://wa.me/919876543210"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-3 px-8 py-4 bg-white dark:bg-gray-200 rounded-2xl font-black hover:scale-105 active:scale-95 transition-all shadow-xl"
+                                    className="text-black inline-flex items-center gap-3 px-8 py-4 bg-white dark:bg-gray-200 rounded-2xl font-black hover:scale-105 active:scale-95 transition-all shadow-xl"
                                 >
                                     Chat on WhatsApp <ArrowRight size={20} />
                                 </a>
@@ -149,7 +149,7 @@ export default function Contact() {
 
                                 <button
                                     type="submit"
-                                    className="w-full py-5 bg-white dark:bg-gray-200 rounded-[1.5rem] font-black hover:scale-[1.02] active:scale-95 transition-all shadow-2xl flex items-center justify-center gap-3"
+                                    className="text-black w-full py-5 bg-white dark:bg-gray-200 rounded-[1.5rem] font-black hover:scale-[1.02] active:scale-95 transition-all shadow-2xl flex items-center justify-center gap-3"
                                 >
                                     Send Message <Send size={20} />
                                 </button>

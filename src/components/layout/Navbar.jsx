@@ -58,14 +58,13 @@ export default function Navbar() {
                         : "bg-transparent py-5"
             )}
         >
-            <div className="container mx-auto px-4 md:px-6 grid grid-cols-[auto_1fr_auto] items-center">
-
-                {/* Logo */}
-                <Link to="/" className="flex items-center gap-2">
+            <div className="container mx-auto px-4 md:px-6 flex items-center justify-between md:grid md:grid-cols-[auto_1fr_auto]">
+                {/* Logo - Left */}
+                <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-black dark:text-white">
                     <img src={logo} alt="Zapurse logo" className="h-12 w-auto" />
                 </Link>
 
-                {/* Desktop Nav */}
+                {/* Desktop Nav Links - Center */}
                 <div className="hidden md:flex items-center justify-center space-x-8">
                     {navLinks.map(link => (
                         <div key={link.name} className="relative group">
@@ -110,6 +109,7 @@ export default function Navbar() {
                     </button>
                 </div>
             </div>
+
 
             {/* Mobile Menu */}
             <AnimatePresence>
