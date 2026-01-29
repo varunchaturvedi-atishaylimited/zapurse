@@ -18,11 +18,11 @@ const faqData = [
     {
         question: "How do I make a recharge?",
         answer: `Open the Zapurse app.
-Select the service(Mobile, DTH, etc.).
-Enter your number and operator.
-Choose or enter the recharge amount.
-Confirm and pay securely through your preferred payment method.
-    That’s it! Your recharge is done instantly.`
+                Select the service(Mobile, DTH, etc.).
+                Enter your number and operator.
+                Choose or enter the recharge amount.
+                Confirm and pay securely through your preferred payment method.
+                That’s it! Your recharge is done instantly.`
     },
     {
         question: "What payment methods are accepted?",
@@ -35,8 +35,8 @@ Confirm and pay securely through your preferred payment method.
     {
         question: "What should I do if a recharge fails?",
         answer: `If your recharge fails, don’t worry.
-If payment was deducted, it will
-be automatically refunded to your original payment method within 2–3 working days.`
+                If payment was deducted, it will
+                be automatically refunded to your original payment method within 2–3 working days.`
     },
     {
         question: "Is my payment information safe?",
@@ -76,9 +76,16 @@ export default function FAQ() {
                                 onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
                                 className="w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none"
                             >
-                                <span className={`text-lg font-bold ${openIndex === index ? 'text-primary' : 'text-gray-900 dark:text-gray-100'}`}>
+                                <span
+                                    className={`text-lg font-bold ${openIndex === index
+                                        ? 'text-primary dark:text-gray-100'
+                                        : 'text-gray-900 dark:text-gray-100'
+                                        }`}
+                                >
                                     {faq.question}
                                 </span>
+
+
                                 {openIndex === index ? <Minus className="text-primary flex-shrink-0" /> : <Plus className="text-gray-400 dark:text-gray-500 flex-shrink-0" />}
                             </button>
                             <AnimatePresence>
