@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* -------------------------------
+   Base Variables & Theme Colors
+---------------------------------*/
 @layer base {
   :root {
     --background: 120 20% 96%;
@@ -35,57 +38,80 @@
     @apply list-decimal pl-6;
   }
 
-  .theme {
-    --animate-line-shadow: line-shadow 15s linear infinite;
-    --animate-meteor: meteor 5s linear infinite;
+  /* -------------------------------
+     Global Headings (h1–h6)
+  ---------------------------------*/
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-transparent bg-clip-text font-black tracking-tighter;
+
+    /* Light mode gradient */
+    background-image: linear-gradient(to right, #080F4A, #182B0C);
+
+    margin-bottom: 1.5rem;
+    /* adjust spacing */
   }
+
+  /* Individual heading sizes */
+  h1 {
+    @apply text-5xl md:text-7xl;
+  }
+
+  h2 {
+    @apply text-4xl md:text-6xl;
+  }
+
+  h3 {
+    @apply text-3xl md:text-5xl;
+  }
+
+  h4 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h5 {
+    @apply text-xl md:text-2xl;
+  }
+
+  h6 {
+    @apply text-lg md:text-xl;
+  }
+
+  /* Dark mode gradient override */
+  .dark h1,
+  .dark h2,
+  .dark h3,
+  .dark h4,
+  .dark h5,
+  .dark h6 {
+    background-image: linear-gradient(to right, #ffffff, #10b981);
+    /* white → light green */
+  }
+
+  /* All <p> elements */
+  p {
+    font-size: 20px;
+    /* 20px font */
+    color: #000000;
+    /* Tailwind gray-600 for light mode */
+  }
+
+  .dark p {
+    color: #D1D5DB;
+    /* Tailwind gray-300 for dark mode */
+  }
+
+
 }
 
+/* -------------------------------
+   Animations (Optional)
+---------------------------------*/
 @layer base {
-  :root {
-    --background: 120 20% 96%;
-    --foreground: 231 82% 16%;
-    --border: 120 10% 85%;
-
-    --primary: 231 82% 16%;
-    --secondary: 142 71% 58%;
-  }
-
-  .dark {
-    --background: 120 10% 5%;
-    --foreground: 120 30% 90%;
-    --border: 120 15% 20%;
-  }
-
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-feature-settings: "kern", "liga";
-  }
-
-  ul:not(.list-none) {
-    @apply list-disc pl-6;
-  }
-
-  ol {
-    @apply list-decimal pl-6;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@theme inline {
   @keyframes line-shadow {
     0% {
       background-position: 0 0;

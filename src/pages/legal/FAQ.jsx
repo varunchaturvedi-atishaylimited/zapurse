@@ -13,16 +13,16 @@ const faqData = [
     },
     {
         question: "How do I download the Zapurse app?",
-        answer: "You can download the Zapurse app from the Google Play Store and App Store. Just search for “Zapurse and tap install."
+        answer: "You can download the Zapurse app from the Google Play Store and App Store. Just search for “Zapurse” and tap install."
     },
     {
         question: "How do I make a recharge?",
         answer: `Open the Zapurse app.
-                Select the service(Mobile, DTH, etc.).
-                Enter your number and operator.
-                Choose or enter the recharge amount.
-                Confirm and pay securely through your preferred payment method.
-                That’s it! Your recharge is done instantly.`
+Select the service (Mobile, DTH, etc.).
+Enter your number and operator.
+Choose or enter the recharge amount.
+Confirm and pay securely through your preferred payment method.
+That’s it! Your recharge is done instantly.`
     },
     {
         question: "What payment methods are accepted?",
@@ -34,9 +34,8 @@ const faqData = [
     },
     {
         question: "What should I do if a recharge fails?",
-        answer: `If your recharge fails, don’t worry.
-                If payment was deducted, it will
-                be automatically refunded to your original payment method within 2–3 working days.`
+        answer: `If your recharge fails, don’t worry. 
+If payment was deducted, it will be automatically refunded to your original payment method within 2–3 working days.`
     },
     {
         question: "Is my payment information safe?",
@@ -44,7 +43,7 @@ const faqData = [
     },
     {
         question: "Can I get cashback or offers on recharges?",
-        answer: "Yes! Zapurse regularly runs special offers, discounts, and cashback deals. Keep checking the app’s ‘Offers’ section for exciting rewards."
+        answer: "Yes! Zapurse regularly runs special offers, discounts, and cashback deals. Check the app’s ‘Offers’ section for rewards."
     },
     {
         question: "How can I contact customer support?",
@@ -56,38 +55,42 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState(0);
 
     return (
-        <div className="pt-24 min-h-screen pb-20 bg-transparent transition-colors duration-300">
+        <div className="pt-24 pb-20 min-h-screen transition-colors duration-300 bg-transparent">
             <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+                {/* Header */}
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Frequently Asked Questions</h1>
-                    <p className="text-xl text-gray-600 dark:text-gray-400">Can't find the answer you're looking for? Reach out to our support.</p>
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+                        Frequently Asked Questions
+                    </h1>
+                    <p className="text-xl text-gray-600 dark:text-gray-400">
+                        Can't find the answer you're looking for? Reach out to our support.
+                    </p>
                 </div>
 
+                {/* FAQ Items */}
                 <div className="space-y-4">
                     {faqData.map((faq, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
+                            transition={{ delay: index * 0.05 }}
                             className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-700 shadow-sm"
                         >
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
                                 className="w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none"
                             >
-                                <span
-                                    className={`text-lg font-bold ${openIndex === index
-                                        ? 'text-primary dark:text-gray-100'
-                                        : 'text-gray-900 dark:text-gray-100'
-                                        }`}
-                                >
+                                <span className={`text-lg font-bold ${openIndex === index ? 'text-primary dark:text-gray-100' : 'text-gray-900 dark:text-gray-100'}`}>
                                     {faq.question}
                                 </span>
-
-
-                                {openIndex === index ? <Minus className="text-primary flex-shrink-0" /> : <Plus className="text-gray-400 dark:text-gray-500 flex-shrink-0" />}
+                                {openIndex === index ? (
+                                    <Minus className="text-primary flex-shrink-0" />
+                                ) : (
+                                    <Plus className="text-gray-400 dark:text-gray-500 flex-shrink-0" />
+                                )}
                             </button>
+
                             <AnimatePresence>
                                 {openIndex === index && (
                                     <motion.div
@@ -96,7 +99,7 @@ export default function FAQ() {
                                         exit={{ height: 0, opacity: 0 }}
                                         className="overflow-hidden"
                                     >
-                                        <div className="px-8 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+                                        <div className="px-8 pb-6 text-gray-600 dark:text-gray-400 leading-relaxed whitespace-pre-line">
                                             {faq.answer}
                                         </div>
                                     </motion.div>

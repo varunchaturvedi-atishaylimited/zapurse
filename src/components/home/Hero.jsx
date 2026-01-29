@@ -55,67 +55,41 @@ export default function Hero() {
         <section ref={heroRef} className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
             <div className="container mx-auto px-4 md:px-6 z-10 grid md:grid-cols-2 gap-12 items-center">
                 <InteractiveGridPattern />
+
                 {/* Text Content */}
                 <div ref={contentRef} className="text-center md:text-left space-y-6">
-                    <div className="hero-text-child">
-                        <div className="inline-block px-4 py-1.5 rounded-full bg-[#080F4A]/5 dark:bg-green-400/10 text-[#080F4A] dark:text-green-400 text-sm font-bold tracking-wide border border-[#080F4A]/10 dark:border-green-400/20 mb-2">
-                            Trusted by 50,000+ Retailers
-                        </div>
+                    <div className="inline-block px-4 py-1.5 rounded-full bg-[#080F4A]/5 dark:bg-green-400/10 text-[#080F4A] dark:text-green-400 text-sm font-bold tracking-wide border border-[#080F4A]/10 dark:border-green-400/20 mb-2">
+                        Trusted by 50,000+ Retailers
                     </div>
 
-                    <h1 className="hero-text-child text-5xl md:text-6xl lg:text-8xl font-black tracking-tighter text-[#080F4A] dark:text-white leading-[0.95]">
+                    <h1 className="hero-text-child text-5xl md:text-6xl lg:text-8xl leading-[0.95]">
                         Empowering <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#080F4A] to-[#182B0C] dark:from-blue-400 dark:to-green-400">
-                            Digital Payments
-                        </span>
+                        <span>Digital Payments</span>
                     </h1>
 
-                    <p className="hero-text-child text-xl text-gray-600 dark:text-gray-300 md:max-w-xl leading-relaxed">
+                    <p className="hero-text-child text-xl md:max-w-xl">
                         Join India's fastest-growing fintech network. Mobile Recharges and DTH Services — all in one powerful platform for your business.
                     </p>
 
                     <div className="hero-text-child flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-8">
-                        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-                            {/* Play Store Button */}
-                            <a
-                                href="https://play.google.com/store/apps/details?id=com.zapurse.zapurse&hl=en"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="transition-transform hover:scale-105"
-                            >
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                                    alt="Get it on Google Play"
-                                    className="h-14"
-                                />
-                            </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.zapurse.zapurse&hl=en" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-14" />
+                        </a>
 
-                            {/* App Store Button */}
-                            <a
-                                href="https://apps.apple.com/in/app/zapurse-recharge/id6751755861"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="transition-transform hover:scale-105"
-                            >
-                                <img
-                                    src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                                    alt="Download on the App Store"
-                                    className="h-14"
-                                />
-                            </a>
-                        </div>
+                        <a href="https://apps.apple.com/in/app/zapurse-recharge/id6751755861" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
+                            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-14" />
+                        </a>
                     </div>
                 </div>
 
                 {/* Visual Content */}
                 <div className="relative hidden md:block">
-                    <div ref={imageRef} className="relative z-10 w-full max-w-[550px] mx-auto perspective-1000">
+                    <div ref={imageRef} className="relative z-10 w-full max-w-[300px] mx-auto perspective-1000">
                         <img
                             src="/hero-illustration.png"
                             alt="Zapurse Mobile Recharge and Fintech App"
                             className="w-full object-contain drop-shadow-[0_20px_50px_rgba(8,15,74,0.3)] rounded-[2.5rem] transform transition-transform duration-500 hover:rotate-2"
                         />
-                        {/* Decorative 3D elements */}
                         <div className="absolute -top-10 -right-10 w-32 h-32 bg-green-500/20 rounded-full blur-2xl animate-pulse" />
                         <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[#182B0C]/20 rounded-full blur-3xl animate-bounce-slow" />
                     </div>
@@ -131,4 +105,6 @@ export default function Hero() {
             </div>
         </section>
     );
+
+
 }

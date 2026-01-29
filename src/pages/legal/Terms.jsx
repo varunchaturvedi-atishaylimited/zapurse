@@ -1,83 +1,182 @@
 import LegalLayout from './LegalLayout';
-import { Gavel, UserCheck, ShieldAlert, Scale, ScrollText } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-export default function Terms() {
-    const sections = [
-        {
-            icon: <Gavel className="w-6 h-6" />,
-            title: "Acceptance of Terms",
-            desc: "By accessing or using the Zapurse platform, you agree to comply with and be bound by these Terms. If you do not agree to these terms, you may not use our services."
-        },
-        {
-            icon: <UserCheck className="w-6 h-6" />,
-            title: "Agent Registration",
-            desc: "To become a Zapurse agent, you must provide accurate and complete information during the registration process. You are responsible for maintaining the confidentiality of your account credentials."
-        },
-        {
-            icon: <ScrollText className="w-6 h-6" />,
-            title: "Services Provision",
-            desc: "Zapurse provides various financial services including AEPS, DMT, and Bill Payments. We reserve the right to modify, suspend, or discontinue any service at any time without notice."
-        },
-        {
-            icon: <ShieldAlert className="w-6 h-6" />,
-            title: "User Conduct",
-            desc: "You agree not to use our services for any unlawful purpose or in any way that interrupts, damages, or impairs the service."
-        },
-        {
-            icon: <Scale className="w-6 h-6" />,
-            title: "Limitation of Liability",
-            desc: "Zapurse shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your access to or use of, or inability to access or use, the services."
-        }
-    ];
-
+export default function Refund() {
     return (
-        <LegalLayout title="Terms & Conditions" lastUpdated="January 20, 2026">
-            <div className="mb-12 space-y-4">
-                <p className="text-xl font-medium text-[#080F4A] dark:text-green-100/80 leading-relaxed">
-                    Welcome to Zapurse. These terms govern your use of our platform and
-                    the services we provide to our valued partners and users.
-                </p>
-                <div className="h-1 w-20 bg-[#182B0C]/20 rounded-full" />
-            </div>
+        <LegalLayout title="Refund & Cancellation Policy" lastUpdated="January 20, 2026">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="space-y-12"
+            >
+                {/* Intro */}
+                <section>
+                    <p className="leading-relaxed">
+                        Thank you for choosing Zapurse. This Refund & Cancellation Policy outlines
+                        the terms and conditions governing cancellations and refunds on our platform.
+                    </p>
+                </section>
 
-            <div className="grid gap-6">
-                {sections.map((section, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 }}
-                        className="group relative p-6 rounded-2xl bg-white dark:bg-gray-800/40 border border-gray-100 dark:border-gray-800 hover:border-primary/30 transition-all duration-300 shadow-sm"
-                    >
-                        <div className="flex items-start gap-6">
-                            <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#080F4A]/5 dark:bg-green-400/10 text-[#080F4A] dark:text-green-400 flex items-center justify-center group-hover:bg-[#080F4A] dark:group-hover:bg-green-400 group-hover:text-white dark:group-hover:text-[#0a0d0a] transition-colors duration-300">
-                                {section.icon}
-                            </div>
-                            <div className="space-y-2">
-                                <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#080F4A] dark:group-hover:text-green-300 transition-colors">
-                                    {section.title}
-                                </h3>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    {section.desc}
+                <div className="grid gap-10">
+                    {/* Section 1 */}
+                    <section className="p-8 rounded-[2rem] bg-white/30 dark:bg-gray-900 shadow-lg border border-gray-100 dark:border-gray-800 relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-3xl" />
+                        <h4>1. No Cancellation Once the Transaction Is Processed</h4>
+                        <div className="space-y-4">
+                            <p>
+                                All transactions made through Zapurse — including prepaid mobile recharge,
+                                DTH recharge, and bill payments — are instant and final.
+                            </p>
+                            <p>
+                                Once a transaction request is submitted and successfully processed, it
+                                cannot be cancelled, as the service is delivered immediately to the
+                                respective operator or service provider.
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* Section 2 */}
+                    <section className="p-8 rounded-[2rem] bg-white/30 dark:bg-gray-900 shadow-lg border border-gray-100 dark:border-gray-800">
+                        <h4>2. Refund Policy</h4>
+                        <p className="mb-6">
+                            Refunds are allowed only in the specific cases mentioned below:
+                        </p>
+
+                        <div className="space-y-8">
+                            {/* Failed Transactions */}
+                            <div className="p-6 bg-primary/5 rounded-2xl border border-primary/10">
+                                <h5>Failed Transactions</h5>
+                                <p className="mb-4">
+                                    A transaction is considered failed if:
                                 </p>
+                                <ul className="space-y-2 list-none pl-0 mb-6">
+                                    {[
+                                        "The amount is deducted from your bank account, wallet, or card",
+                                        "The recharge or bill payment is not successful",
+                                        "The amount is not passed to the operator or service provider"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-center gap-2">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-gray-400" />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <p className="mb-2">In such cases:</p>
+                                <ul className="space-y-2 list-none pl-0">
+                                    {[
+                                        "The deducted amount will be refunded automatically",
+                                        "Refund timelines range between 3–7 working days"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-center gap-2">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-gray-400" />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            {/* Pending Transactions */}
+                            <div className="p-6 bg-secondary/5 rounded-2xl border border-secondary/10">
+                                <h5>Pending Transactions</h5>
+                                <p className="mb-4">
+                                    If a transaction remains pending due to operator-side delay:
+                                </p>
+                                <ul className="space-y-3 list-none pl-0">
+                                    {[
+                                        "Final status may take up to 24 hours",
+                                        "Refunds are issued only if the operator confirms failure"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex gap-2">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2" />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         </div>
-                    </motion.div>
-                ))}
-            </div>
+                    </section>
 
-            <div className="mt-12 p-8 rounded-[2.5rem] bg-gradient-to-br from-[#080F4A] to-[#182B0C] text-white shadow-2xl overflow-hidden relative">
-                <h3 className="text-xl font-black mb-2 tracking-tight">
-                    Important Notice
-                </h3>
-                <p className="text-sm opacity-80">
-                    These terms are subject to change. Continued use of the platform after updates
-                    constitutes acceptance of the new terms. Please review this page regularly for any
-                    modifications.
-                </p>
-            </div>
+                    {/* Section 3 */}
+                    <section className="p-8 rounded-[2rem] bg-white/30 dark:bg-gray-900 shadow-lg border border-gray-100 dark:border-gray-800">
+                        <h4>3. Exceptions (No Refund)</h4>
+                        <p className="mb-6">
+                            Refunds will not be issued in the following situations:
+                        </p>
+                        <div className="grid md:grid-cols-2 gap-4">
+                            {[
+                                "Incorrect details entered by the user",
+                                "Wrong operator or circle selected",
+                                "Transaction marked successful by operator",
+                                "User dissatisfaction after success",
+                                "Duplicate recharge requests",
+                                "Incorrect or incomplete information provided"
+                            ].map((item, i) => (
+                                <div key={i} className="flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800">
+                                    <div className="w-1 h-1 rounded-full bg-gray-400" />
+                                    {item}
+                                </div>
+                            ))}
+                        </div>
+                        <p className="mt-8 text-center font-semibold">
+                            Zapurse is not responsible for errors caused by incorrect user input.
+                        </p>
+                    </section>
+
+                    {/* Sections 4 & 5 */}
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <section className="p-8 rounded-[2rem] bg-white/30 dark:bg-gray-900 shadow-lg border border-gray-100 dark:border-gray-800">
+                            <h4>4. Processing Time for Refunds</h4>
+                            <div className="space-y-4">
+                                {[
+                                    { method: "UPI", time: "1–3 business days" },
+                                    { method: "Debit Card / Bank", time: "3–7 business days" }
+                                ].map((item, i) => (
+                                    <div key={i} className="flex justify-between p-4 bg-primary/5 rounded-xl border border-primary/10">
+                                        <span className="font-semibold">{item.method}</span>
+                                        <span className="font-bold">{item.time}</span>
+                                    </div>
+                                ))}
+                                <p className="text-xs opacity-60 italic">
+                                    Refund timelines may vary based on bank policies.
+                                </p>
+                            </div>
+                        </section>
+
+                        <section className="p-8 rounded-[2rem] bg-white/30 dark:bg-gray-900 shadow-lg border border-gray-100 dark:border-gray-800">
+                            <h4>5. Disputes & Support</h4>
+                            <p className="mb-4">For failed or pending transactions, contact support with:</p>
+                            <ul className="space-y-1 list-none pl-0 mb-6">
+                                {["Transaction ID", "Registered mobile number", "Date and time of transaction"].map((item, i) => (
+                                    <li key={i} className="flex items-center gap-2">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-gray-400" />
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                            <p><strong>Email:</strong> support@zapurse.com</p>
+                            <p><strong>Website:</strong> www.zapurse.in</p>
+                        </section>
+                    </div>
+
+                    {/* Section 6 */}
+                    <section className="p-8 rounded-[2rem] bg-white/30 dark:bg-gray-900 shadow-lg border border-gray-100 dark:border-gray-800">
+                        <h4>6. Operator-Level Policies</h4>
+                        <p className="max-w-2xl mx-auto opacity-80">
+                            Refunds depend on final operator status. If marked successful by the operator,
+                            no refund can be issued even in case of non-receipt.
+                        </p>
+                    </section>
+
+                    {/* Footer / Policy Modification */}
+                    <section className="p-10 rounded-[2.5rem] bg-gradient-to-br from-[#254458] to-[#c0cc64]/20 text-white shadow-lg relative overflow-hidden">
+                        <h4>7. Modification of Policy</h4>
+                        <p className="opacity-90 leading-relaxed">
+                            Zapurse reserves the right to modify this policy at any time.
+                            Changes will be published on the Zapurse app or website.
+                        </p>
+                    </section>
+                </div>
+            </motion.div>
         </LegalLayout>
     );
 }

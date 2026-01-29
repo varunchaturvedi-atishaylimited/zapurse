@@ -3,13 +3,10 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="relative overflow-hidden pt-10 pb-10 duration-700 transition-colors overflow-hidden">
+        <footer className="relative overflow-hidden pt-10 pb-10 transition-colors duration-700">
 
             {/* Decorative background blob */}
-            <div className="absolute top-0 right-0 w-96 h-96 
-        rounded-full blur-3xl 
-        -translate-y-1/2 translate-x-1/2 
-        pointer-events-none" />
+            <div className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
 
@@ -18,14 +15,11 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="space-y-6">
                         <Link to="/" className="text-2xl font-bold tracking-tighter flex items-center gap-2">
-                            <span className="text-4xl font-black text-gray-900 dark:text-white">
-                                Zapurse
-                            </span>
+                            <span className="text-4xl font-black">Zapurse</span>
                         </Link>
 
-                        <p className="text-gray-600 dark:text-white/70 max-w-sm leading-relaxed text-lg">
-                            Building last-mile fintech services with trust & innovation.
-                            Empowering businesses across India using simplified digital payments.
+                        <p className="leading-relaxed max-w-sm">
+                            Building last-mile fintech services with trust & innovation. Empowering businesses across India using simplified digital payments.
                         </p>
 
                         <div className="flex items-center gap-5 pt-4">
@@ -40,10 +34,8 @@ export default function Footer() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="p-3 rounded-2xl border shadow-sm transition-all duration-300
-                    bg-black/5 border-black/10 text-gray-700
-                    hover:bg-black hover:text-white
-                    dark:bg-white/10 dark:border-white/10 dark:text-white
-                    dark:hover:bg-white dark:hover:text-[#080F4A]"
+                  bg-black/5 border-black/10 hover:bg-black hover:text-white
+                  dark:bg-white/10 dark:border-white/10 dark:hover:bg-white dark:hover:text-[#080F4A]"
                                 >
                                     {social.icon}
                                 </a>
@@ -53,28 +45,18 @@ export default function Footer() {
 
                     {/* Services */}
                     <div>
-                        <h3 className="font-black text-2xl mb-8 border-l-4 pl-4
-              border-gray-900 text-gray-900
-              dark:border-white dark:text-white">
+                        <h3 className="font-black text-2xl mb-8 border-l-4 border-current">
                             Our Services
                         </h3>
 
                         <ul className="space-y-4 list-none pl-0">
                             <li>
-                                <Link
-                                    to="/services#recharge"
-                                    className="text-lg text-gray-600 hover:text-gray-900
-                    dark:text-white/70 dark:hover:text-white transition-colors"
-                                >
+                                <Link to="/services#recharge" className="text-lg transition-colors hover:underline">
                                     Mobile Recharge
                                 </Link>
                             </li>
                             <li>
-                                <Link
-                                    to="/services#dth"
-                                    className="text-lg text-gray-600 hover:text-gray-900
-                    dark:text-white/70 dark:hover:text-white transition-colors"
-                                >
+                                <Link to="/services#dth" className="text-lg transition-colors hover:underline">
                                     DTH Recharge
                                 </Link>
                             </li>
@@ -83,9 +65,7 @@ export default function Footer() {
 
                     {/* Discover */}
                     <div>
-                        <h3 className="font-black text-2xl mb-8 border-l-4 pl-4
-              border-gray-900 text-gray-900
-              dark:border-white dark:text-white">
+                        <h3 className="font-black text-2xl mb-8 border-l-4 border-current">
                             Discover
                         </h3>
 
@@ -98,11 +78,7 @@ export default function Footer() {
                                 { name: "FAQ", path: "/legal/faq" }
                             ].map(link => (
                                 <li key={link.name}>
-                                    <Link
-                                        to={link.path}
-                                        className="text-lg text-gray-600 hover:text-gray-900
-                      dark:text-white/70 dark:hover:text-white transition-colors"
-                                    >
+                                    <Link to={link.path} className="text-lg transition-colors hover:underline">
                                         {link.name}
                                     </Link>
                                 </li>
@@ -113,9 +89,7 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom */}
-                <div className="border-t pt-8 mt-8 text-sm text-center
-          border-black/10 text-gray-500
-          dark:border-white/10 dark:text-white/50">
+                <div className="border-t pt-8 mt-8 text-sm text-center border-current">
                     &copy; {new Date().getFullYear()} Zapurse (Atishay Limited). All rights reserved.
                 </div>
 
