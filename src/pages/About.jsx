@@ -49,7 +49,8 @@ export default function About() {
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
                             >
-                                <div className="font-black flex justify-center items-center mb-3 text-6xl">
+                                <div className="font-black flex justify-center items-center mb-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+
                                     <NumberTicker value={stat.value} />
                                     <span>{stat.suffix}</span>
                                 </div>
@@ -113,6 +114,7 @@ export default function About() {
                         </motion.div>
                     </div>
                 </section>
+
             </div>
         </div>
     );
