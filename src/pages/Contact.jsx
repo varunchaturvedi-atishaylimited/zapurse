@@ -55,7 +55,7 @@ export default function Contact() {
                                     icon: <Phone size={24} />,
                                     bg: "bg-green-500/10 dark:bg-green-500/20",
                                     title: "Phone",
-                                    content: "+91 98765 43210 (Mon – Sat, 10am – 6pm)",
+                                    content: "+91 62626 29831 (Mon – Sat, 10am – 6pm)",
                                 },
                                 {
                                     icon: <Mail size={24} />,

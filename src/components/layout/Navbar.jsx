@@ -180,7 +180,7 @@ export default function Navbar() {
                             <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Get in touch</p>
                             <div className="flex items-center gap-2 font-bold text-primary text-xl">
                                 <Phone size={20} />
-                                <span>+91 98765 43210</span>
+                                <span>+91 62626 29831</span>
                             </div>
                         </div>
                     </motion.div>
